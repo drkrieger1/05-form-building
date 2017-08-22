@@ -54,23 +54,27 @@
                    4. Author's URL
                    5. Article category
                    6. Some way to know if this article is a draft or is published -->
-                   <form id="new-form" action="">
-                     Article Title:<br>
-                     <input type="text" name="title" value="" size="20">
-                     <br>
-                     Article Body:<br>
-                     <input type="text" name="body" value="" size="100">
-                     Article Author:<br>
-                     <input type="text" name="author" value="" size="20">
-                     Article URL:<br>
-                     <input type="text" name="authorUrl" value="" size="20">
-                     Article Category:<br>
-                     <input type="text" name="category" value="" size="20">
-                     <br><br>
-                     <input type="submit" value="Submit">
-                   </form>
+          <form id="new-form">
+            <label>
+              <input type="text" id="article-title" placeholder="Atrtical Title" required>
+            </label>
+            <label>
+              <textarea id="article-body" rows="8" cols="40" placeholder="type here" required></textarea>
+            </label>
+            <label>
+              <input type="text" id="article-author" placeholder="author" required>
+            </label>
+            <label>
+              <input type="text" id="article-author-url" placeholder="authors url" required>
+            </label>
+            <label>
+              <input type="text" id="article-category" placeholder="category" required>
+            </label>
+            <label>
+              <input type="checkbox" id="article-published">published
+            </label>
 
-                  <input id="check-box" type="checkbox"><h3>Published</h3>
+          </form>
       </section>
 
       <section id="articles" class="tab-content">
@@ -96,7 +100,7 @@
       // TODO: We will need to call a function here to initialize the behaviors on this page, once we get them built out. Why?
       // (Look at the bottom of index.html as a reference. Since we are now using our JS on two different HTML pages that have different needs as to what parts of the code they utilize, we need to build a function that inializes each page.)
       //  Hint: Look in articleView.js for a function that does this.
-      articleView.populateFilters();
+      articleView.initNewArticlePage();
     </script>
   </body>
 </html>
