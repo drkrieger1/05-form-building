@@ -45,7 +45,16 @@ a:visited {
 
 /*FORM STYLES
 =======================================*/
-/*TODO: Add the CSS needed to style the form*/
+/*Done: Add the CSS needed to style the form*/
 label {
   display:block;
+  width: 100%;
+}
+#new-form{
+  width:100%;
+  margin: 0 auto;
+  text-align: center;
+}
+#article-title, #article-body, #article-author, #article-author-url, #article-category{
+  width: 100%;
 }
